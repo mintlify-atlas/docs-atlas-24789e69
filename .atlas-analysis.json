@@ -1,0 +1,171 @@
+{
+  "projectType": "saas",
+  "projectName": "eXeLearning",
+  "projectDescription": "A free and open source authoring tool for creating and publishing interactive educational resources.",
+  "theme": "almond",
+  "primaryColor": "#2563eb",
+  "lightColor": "#3b82f6",
+  "darkColor": "#1e40af",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "installation"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/architecture",
+              "concepts/projects",
+              "concepts/idevices",
+              "concepts/collaboration",
+              "concepts/themes"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/creating-content",
+              "guides/managing-assets",
+              "guides/exporting",
+              "guides/collaborative-editing",
+              "guides/custom-themes"
+            ]
+          },
+          {
+            "group": "Deployment",
+            "pages": [
+              "deployment/docker",
+              "deployment/server",
+              "deployment/desktop",
+              "deployment/configuration",
+              "deployment/authentication"
+            ]
+          },
+          {
+            "group": "Integrations",
+            "pages": [
+              "integrations/moodle",
+              "integrations/lms",
+              "integrations/embedding"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Development",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "development/environment-setup",
+              "development/project-structure",
+              "development/development-workflow"
+            ]
+          },
+          {
+            "group": "Architecture",
+            "pages": [
+              "development/architecture/overview",
+              "development/architecture/backend",
+              "development/architecture/frontend",
+              "development/architecture/database",
+              "development/architecture/websockets"
+            ]
+          },
+          {
+            "group": "Building Features",
+            "pages": [
+              "development/building/idevices",
+              "development/building/exporters",
+              "development/building/routes",
+              "development/building/themes"
+            ]
+          },
+          {
+            "group": "Testing",
+            "pages": [
+              "development/testing/unit-tests",
+              "development/testing/integration-tests",
+              "development/testing/e2e-tests"
+            ]
+          },
+          {
+            "group": "Advanced",
+            "pages": [
+              "development/advanced/yjs-internals",
+              "development/advanced/asset-management",
+              "development/advanced/preview-system",
+              "development/advanced/internationalization"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "REST API",
+            "pages": [
+              "api/overview",
+              "api/authentication",
+              "api/projects",
+              "api/pages",
+              "api/assets",
+              "api/export"
+            ]
+          },
+          {
+            "group": "WebSocket",
+            "pages": [
+              "api/websocket/overview",
+              "api/websocket/yjs-protocol",
+              "api/websocket/asset-protocol"
+            ]
+          },
+          {
+            "group": "CLI",
+            "pages": [
+              "api/cli/overview",
+              "api/cli/commands"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Interactive educational content authoring",
+    "Real-time collaborative editing with Yjs",
+    "Multi-format export (HTML5, SCORM 1.2/2004, EPUB3, IMS CP)",
+    "Browser-first architecture with offline support",
+    "Extensive iDevice library for interactive elements",
+    "Multi-database support (SQLite, PostgreSQL, MySQL)",
+    "Desktop applications for Windows, macOS, and Linux",
+    "RESTful API for external integrations",
+    "Embeddable in LMS platforms",
+    "Custom theme support",
+    "Multilingual interface"
+  ],
+  "publicApiSurface": [
+    "POST /api/v1/auth/login - Authenticate user",
+    "POST /api/v1/projects - Create project",
+    "GET /api/v1/projects/:uuid - Get project",
+    "PUT /api/v1/projects/:uuid - Update project",
+    "POST /api/v1/projects/:uuid/pages - Create page",
+    "POST /api/v1/projects/:uuid/export - Export project",
+    "GET /api/v1/assets/:id - Get asset",
+    "WebSocket /yjs/project-{uuid} - Real-time collaboration",
+    "CLI: exelearning elp:convert - Convert ELP files",
+    "CLI: exelearning elp:export - Export projects",
+    "CLI: exelearning migrate - Run database migrations",
+    "CLI: exelearning create-user - Create user account"
+  ]
+}
